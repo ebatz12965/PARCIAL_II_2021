@@ -20,12 +20,12 @@
       <div class="calc container">
 
           <!-- HEADER -->
-          <div class="row bg-dark min-flex text-white">
+          <!--<div class="row bg-dark min-flex text-white">-->
                 <div class="header text-center">
                     <h1>Calculadora</h1>   
                 </div>
             
-                <div class="display text-white bg-dark w-75 my-3">
+                <div class="display text-white bg-dark w-70 my-3">
                     <div id="valor-anterior"></div>
                     <div id="valor-actual"></div>
                 </div>
@@ -36,22 +36,22 @@
 
                  <!-- BOTONES -->
                     
-                <div class="row min-flex">
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="(">(</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value=")">)</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.sin">sin</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.cos">cos</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.tan">tan</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.sqrt;">√x</button>
+                <div class="center row min-flex">
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="(">(</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value=")">)</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="Math.sin">sin</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="Math.cos">cos</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="Math.tan">tan</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="Math.sqrt;">√x</button>
                 </div> 
 
                 <div class="row min-flex">
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="^">^</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value=" "> </button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="%">%</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value=" "> </button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.log">log</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value=" "> </button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="^">^</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value=" "> </button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="%">%</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value=" "> </button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="Math.log">log</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value=" "> </button>
                 </div> 
 
                 <div>
@@ -59,35 +59,35 @@
                 </div>
 
                 <div class="row min-flex">
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="7">7</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="8">8</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="9">9</button>
-                    <button class="btn btn-outline-danger col-2" onclick="display.deleteAll()">C</button>
-                    <button class="btn btn-outline-danger col-2" onclick="display.deleteValue()">&larr;</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="7">7</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="8">8</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="9">9</button>
+                    <button class="btn btn-outline-danger col-2 ml-7 mt-5" style="width: 80px; height: 50px;" onclick="display.deleteAll()">C</button>
+                    <button class="btn btn-outline-danger col-2 ml-7 mt-5" style="width: 80px; height: 50px;" onclick="display.deleteValue()">&larr;</button>
                 </div> 
 
                 <div class="row min-flex">
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="4">4</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="5">5</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="6">6</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="+-">&plusmn;</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="+">+</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="-">-</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="4">4</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="5">5</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="6">6</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="+-">&plusmn;</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="+">+</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="-">-</button>
                 </div> 
 
                 <div class="row min-flex">
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="1">1</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="2">2</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="3">3</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="*">*</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="/">/</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.prod">&prod;</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="1">1</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="2">2</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="3">3</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="*">*</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="/">/</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="Math.prod">&prod;</button>
                 </div>
 
                 <div class="row min-flex">
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value="0">0</button>
-                    <button type="button" class="btn btn-outline-danger col-2 operador" value=".">.</button>
-                    <button class="btn btn-outline-danger col-4 operador" value="igual">=</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value="0">0</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador rounded-circle ml-5 mt-5" style="width: 50px; height: 50px;" value=".">.</button>
+                    <button class="btn btn-outline-danger col-4 operador ml-7 mt-5" style="width: 80px; height: 50px;" value="igual">=</button>
                 </div>
 
             </div>
