@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Estilo.css">
+    <script src="Operaciones.js"></script>
+    <script src="Display.js"></script>
+    <script src="PARCIAL 2.html" defer></script>
+</head>
+
+<body>
+   
+  <main class="main min-flex">
+      <div class="calc container">
+
+          <!-- HEADER -->
+          <div class="row bg-dark min-flex text-white">
+                <div class="header text-center">
+                    <h1>Calculadora</h1>   
+                </div>
+            
+                <div class="display text-white bg-dark w-75 my-3">
+                    <div id="valor-anterior"></div>
+                    <div id="valor-actual"></div>
+                </div>
+
+                <div>
+                    <h1>CIENTIFICA</h1>
+                </div>
+
+                 <!-- BOTONES -->
+                    
+                <div class="row min-flex">
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="(">(</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value=")">)</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.sin">sin</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.cos">cos</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.tan">tan</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.sqrt;">√x</button>
+                </div> 
+
+                <div class="row min-flex">
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="^">^</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value=" "> </button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="%">%</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value=" "> </button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.log">log</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value=" "> </button>
+                </div> 
+
+                <div>
+                    <h1>BASICA</h1>
+                </div>
+
+                <div class="row min-flex">
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="7">7</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="8">8</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="9">9</button>
+                    <button class="btn btn-outline-danger col-2" onclick="display.deleteAll()">C</button>
+                    <button class="btn btn-outline-danger col-2" onclick="display.deleteValue()">&larr;</button>
+                </div> 
+
+                <div class="row min-flex">
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="4">4</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="5">5</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="6">6</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="+-">&plusmn;</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="+">+</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="-">-</button>
+                </div> 
+
+                <div class="row min-flex">
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="1">1</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="2">2</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="3">3</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="*">*</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="/">/</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="Math.prod">&prod;</button>
+                </div>
+
+                <div class="row min-flex">
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value="0">0</button>
+                    <button type="button" class="btn btn-outline-danger col-2 operador" value=".">.</button>
+                    <button class="btn btn-outline-danger col-4 operador" value="igual">=</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- VENTANA MODAL -->
+        <div class="container text-center" >
+            <p> </p>
+            <button type="button" class="btn btn-danger col-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Datos del Alumno</button>
+        </div>
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title" id="exampleModalLabel">Datos del Alumno</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label">Carne:</label> 
+                      <label for="recipient-name" class="col-form-label">0909-14-12965</label>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Nombre:</label>
+                      <label for="recipient-name" class="col-form-label">Edwing Oswaldo Batz Martínez</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Fecha y hora de culminación:</label>
+                        <label for="recipient-name" class="col-form-label">Sigo en proceso, pero no había hecho commit hasta ahorita, lamento eso! Horas de trabajo, de 7 pm a 12 am</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Nota esperada según rendimiento:</label>
+                        <label for="recipient-name" class="col-form-label">Que no baje de 15 estoy esperando! Al finalizar le comento!</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+             
+</body>
+</html>
