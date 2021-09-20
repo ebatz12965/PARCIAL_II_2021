@@ -13,6 +13,10 @@ class Operacion{
                 this.numPantalla = Math.sqrt(this.num2, 1/this.num1);
                 return this.numPantalla;
                 break;
+            case 'sin':
+                    this.numPantalla = Math.sin(this.num1);
+                    return this.numPantalla;
+                    break;
         }
     }
 }

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="Estilos CSS.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Estilo CSS.css">
     <script src="Operacion.js"></script>
     <script src="Display.js"></script>
     <script src="index.js" defer></script>
@@ -14,8 +16,8 @@
 <body>
     <main class="main min-flex">
         <div class="calc container">
-
-            <!-- CALCULADORA -->
+               
+                <!-- CALCULADORA -->
             <div class="row bg-dark min-flex">
                 
                     <div class="row cont-display min-flex">
@@ -26,17 +28,30 @@
                     </div>
                         
                     <!-- BOTONES -->
-                    <div>
-                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;"value="(">(</button>
-                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value=")">)</button>
-                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="Math.sin">sin</button>
-                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="Math.cos">cos</button>
-                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="Math.tan">tan</button>
-                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="raiz">√</button>
+
+                    <div class="header text-white min-flex">
+                            <h4>BASICA</h4>   
+                    </div>
+                    <div class="row min-flex">
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;"value="pareniz">(</button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="parende">)</button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="sin">sin</button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="cos">cos</button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="tan">tan</button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="raiz">√x</button>
+                    </div>
+
+                    <div class="row min-flex">
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;"value="potencia">^</button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="vacio"></button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="porcentaje">%</button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="vacio"></button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="log">log</button>
+                            <button class="btn btn-outline-danger col-2 operador rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;" value="vacio"></button>
                     </div>
 
                     <div class="header text-white min-flex">
-                        <h4>BASICA</h4>   
+                            <h4>BASICA</h4>   
                     </div>
 
                     <div class="row min-flex">
@@ -67,12 +82,50 @@
                     <div class="row min-flex">
                             <button class="btn btn-outline-danger col-2 numero rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;">0</button>
                             <button class="btn btn-outline-danger col-2 numero rounded-circle ml-3 mt-3" style="width: 50px; height: 50px;">.</button>
-                            <button class="btn btn-outline-danger col-2 operador" value="igual">=</button>
+                            <button class="btn btn-outline-danger col-2 operador ml-8 mt-3 " style="width: 150px; height: 50px;" value="igual">=</button>
                     </div>                
-            </div> 
-                </div>
             </div>
+            <!-- VENTANA MODAL -->
+     <div class="container text-center" >
+        <p> </p>
+        <button class="btn btn-danger col-2 ml-0  mt-0" style="width: 100px; height: 50px;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Datos del Alumno</button>
+    </div>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="exampleModalLabel">Datos del Alumno</h1>
+              <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Carne:</label> 
+                  <label for="recipient-name" class="col-form-label">0909-14-12965</label>
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Nombre:</label>
+                  <label for="recipient-name" class="col-form-label">Edwing Oswaldo Batz Martínez</label>
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Fecha y hora de culminación:</label>
+                    <label for="recipient-name" class="col-form-label">19/09/2021, 09:50 pm</label>
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Nota esperada según rendimiento:</label>
+                    <label for="recipient-name" class="col-form-label">12 pts!</label>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
         </div>
+      </div> 
+        </div>
+       
     </main>
 </body>
 </html>
